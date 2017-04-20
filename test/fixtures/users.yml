@@ -1,0 +1,11 @@
+foo:
+  email: "foo@bar.com"
+  password_digest: <%= SecureRandom.hex %>
+  name: Foo
+  api_token: foobar
+
+baz:
+  email: "baz@qux.com"
+  password_digest: MyString
+  name: Baz
+  api_token: bazqux
