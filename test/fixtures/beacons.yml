@@ -1,0 +1,12 @@
+beacon:
+  major: 1
+  minor: 1
+  code: "1234"
+  user: foo
+  status: 1
+
+on_sale_beacon:
+  major: 0
+  minor: 0
+  code: "1234"
+  status: 0

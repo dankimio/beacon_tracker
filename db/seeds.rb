@@ -8,3 +8,6 @@
 
 user = User.create!(email: 'foo@bar.com', password: 'qwerty123', name: 'Foo')
 user.update!(api_token: 'foobar')
+
+on_salebeacon = Beacon.create!(major: 0, minor: 0, code: '1234', status: 0)
+disabled_beacon = Beacon.create!(major: 1, minor: 1, code: '1234', user: user, status: 1)
