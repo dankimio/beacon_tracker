@@ -6,4 +6,8 @@ Rails.application.routes.draw do
       resource :activation, only: [:create]
     end
   end
+
+  namespace :admin do
+    resources :beacons
+  end
 end

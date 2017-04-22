@@ -1,0 +1,25 @@
+<h1>Beacons</h1>
+
+<div class="form-group">
+  <%= link_to 'New beacon', new_admin_beacon_path, class: 'btn btn-primary' %>
+</div>
+
+<table class="table">
+  <thead>
+    <th>id</th>
+    <th>Name</th>
+    <th>Major</th>
+    <th>Minor</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% @beacons.each do |beacon| %>
+      <tr>
+        <td><%= beacon.id %></td>
+        <td><%= "Bag #{beacon.id}" %></td>
+        <td><%= beacon.major %></td>
+        <td><%= beacon.minor %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
