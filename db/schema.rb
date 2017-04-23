@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420190814) do
+ActiveRecord::Schema.define(version: 20170423155112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170420190814) do
   create_table "beacons", force: :cascade do |t|
     t.integer  "major",                  null: false
     t.integer  "minor",                  null: false
-    t.string   "code",                   null: false
+    t.string   "passcode",               null: false
     t.integer  "status",     default: 0
     t.integer  "user_id"
     t.datetime "created_at",             null: false
