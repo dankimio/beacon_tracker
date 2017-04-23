@@ -1,6 +1,7 @@
 beacon:
   major: 1
   minor: 1
+  major_minor: "1-1"
   passcode: "1234"
   user: foo
   status: 1
@@ -8,5 +9,6 @@ beacon:
 on_sale_beacon:
   major: 0
   minor: 0
+  major_minor: "0-0"
   passcode: "1234"
   status: 0

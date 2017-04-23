@@ -10,20 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170423155112) do
+ActiveRecord::Schema.define(version: 20170423160812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beacons", force: :cascade do |t|
-    t.integer  "major",                  null: false
-    t.integer  "minor",                  null: false
-    t.string   "passcode",               null: false
-    t.integer  "status",     default: 0
+    t.integer  "major",                   null: false
+    t.integer  "minor",                   null: false
+    t.string   "passcode",                null: false
+    t.integer  "status",      default: 0
     t.integer  "user_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "major_minor",             null: false
     t.index ["major", "minor"], name: "index_beacons_on_major_and_minor", unique: true, using: :btree
+    t.index ["major_minor"], name: "index_beacons_on_major_minor", unique: true, using: :btree
     t.index ["user_id"], name: "index_beacons_on_user_id", using: :btree
   end
 
