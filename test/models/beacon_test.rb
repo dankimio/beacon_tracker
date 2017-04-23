@@ -15,15 +15,14 @@ class BeaconTest < ActiveSupport::TestCase
     assert new_beacon.invalid?
   end
 
-  test 'should not activate if already activated' do
-    refute @beacon.activate(@beacon.user, @beacon.code)
+  test 'invalid with invalid code' do
+    @on_sale_beacon.entered_code = SecureRandom.hex
+    assert @on_sale_beacon.invalid?
   end
 
-  test 'should not activate with invalid code' do
-    refute @on_sale_beacon.activate(@on_sale_beacon.user, SecureRandom.hex)
-  end
-
-  test 'should activate with valid code' do
-    assert @on_sale_beacon.activate(@on_sale_beacon.user, @on_sale_beacon.code)
+  test 'valid with matching code' do
+    @on_sale_beacon.entered_code = @on_sale_beacon.code
+    @on_sale_beacon.user = @beacon.user
+    assert @on_sale_beacon.valid?
   end
 end

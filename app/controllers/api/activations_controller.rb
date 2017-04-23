@@ -2,10 +2,10 @@ class API::ActivationsController < API::APIController
   before_action :set_beacon, only: [:create]
 
   def create
-    if @beacon.activate(current_user, beacon_params[:code])
+    if @beacon.update(beacon_params)
       render 'api/beacons/show', status: :created
     else
-      head :unprocessable_entity
+      render json: @beacon.errors, status: :unprocessable_entity
     end
   end
 
@@ -18,6 +18,6 @@ class API::ActivationsController < API::APIController
 
   # Only allow a trusted parameter "white list" through.
   def beacon_params
-    params.require(:beacon).permit(:code)
+    params.require(:beacon).permit(:entered_code).merge(user: current_user)
   end
 end

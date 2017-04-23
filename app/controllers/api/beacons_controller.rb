@@ -10,7 +10,7 @@ class API::BeaconsController < API::APIController
 
   def update
     if @beacon.update(beacon_params)
-      render json: @beacon
+      render :show
     else
       render json: @beacon.errors, status: :unprocessable_entity
     end
@@ -20,7 +20,7 @@ class API::BeaconsController < API::APIController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_beacon
-    @beacon = Beacon.find_by_major_minor_string!(params[:major_minor])
+    @beacon = current_user.beacons.find_by_major_minor_string!(params[:major_minor])
   end
 
   # Only allow a trusted parameter "white list" through.
