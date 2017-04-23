@@ -1,14 +1,15 @@
 class API::BeaconsController < API::APIController
-  before_action :set_beacon, only: [:show, :update]
-
   def index
-    @beacons = Beacon.all
+    @beacons = current_user.beacons
   end
 
   def show
+    @beacon = Beacon.find_by!(major_minor: params[:major_minor])
   end
 
   def update
+    @beacon = current_user.beacons.find_by!(major_minor: params[:major_minor])
+
     if @beacon.update(beacon_params)
       render :show
     else
@@ -17,11 +18,6 @@ class API::BeaconsController < API::APIController
   end
 
   private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_beacon
-    @beacon = current_user.beacons.find_by!(params[:major_minor])
-  end
 
   # Only allow a trusted parameter "white list" through.
   def beacon_params
