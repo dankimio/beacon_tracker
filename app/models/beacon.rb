@@ -7,7 +7,7 @@ class Beacon < ApplicationRecord
   validates :major, :minor, numericality: { greater_than_or_equal_to: 0 }
 
   def self.find_by_major_minor_string!(major_minor_string)
-    raise ActiveRecord::RecordNotFound unless major_minor_string
+    raise ActiveRecord::RecordNotFound unless major_minor_string.present?
 
     major, minor = major_minor_string.split('-').map(&:to_i)
     find_by!(major: major, minor: minor)
