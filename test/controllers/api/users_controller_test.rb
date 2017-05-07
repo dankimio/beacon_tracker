@@ -24,4 +24,11 @@ class API::UsersControllerTest < ActionDispatch::IntegrationTest
     patch api_user_url(@user, api_token: api_token), params: { user: { email: @user.email, name: @user.name } }, as: :json
     assert_response 200
   end
+
+  test 'should authenticate user' do
+    post authenticate_api_user_url(@user),
+         params: { user: @user.attributes.merge(password: 'qwerty123') }, as: :json
+
+    assert_response 200
+  end
 end

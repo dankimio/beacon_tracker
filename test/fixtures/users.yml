@@ -1,11 +1,11 @@
 foo:
   email: "foo@bar.com"
-  password_digest: <%= SecureRandom.hex %>
+  password_digest: <%= BCrypt::Password.create('qwerty123', cost: 4) %>
   name: Foo
   api_token: foobar
 
 baz:
   email: "baz@qux.com"
-  password_digest: MyString
+  password_digest: <%= BCrypt::Password.create('qwerty123', cost: 4) %>
   name: Baz
   api_token: bazqux

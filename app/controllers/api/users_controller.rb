@@ -1,5 +1,5 @@
 class API::UsersController < API::APIController
-  skip_before_action :restrict_access!, only: [:create]
+  skip_before_action :restrict_access!, only: [:create, :authenticate]
   before_action :set_user, only: [:show, :update]
 
   def show
@@ -20,6 +20,16 @@ class API::UsersController < API::APIController
       render :show
     else
       render json: @user.errors, status: :unprocessable_entity
+    end
+  end
+
+  def authenticate
+    @user = User.find_by(email: user_params[:email])
+
+    if @user && @user.authenticate(user_params[:password])
+      render :create
+    else
+      head :unauthorized
     end
   end
 
