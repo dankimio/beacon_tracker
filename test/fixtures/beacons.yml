@@ -1,4 +1,5 @@
 beacon:
+  name: Beacon
   major: 1
   minor: 1
   major_minor: "1-1"
@@ -7,6 +8,7 @@ beacon:
   status: 1
 
 on_sale_beacon:
+  name: On sale beacon
   major: 0
   minor: 0
   major_minor: "0-0"

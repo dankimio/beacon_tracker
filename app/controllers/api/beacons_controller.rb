@@ -21,6 +21,6 @@ class API::BeaconsController < API::APIController
 
   # Only allow a trusted parameter "white list" through.
   def beacon_params
-    params.require(:beacon).permit(:status)
+    params.require(:beacon).permit(:name, :status)
   end
 end
