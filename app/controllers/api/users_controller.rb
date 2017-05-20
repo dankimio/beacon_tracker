@@ -9,7 +9,7 @@ class API::UsersController < API::APIController
     @user = User.new(user_params)
 
     if @user.save
-      render status: :created
+      render :show, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class API::UsersController < API::APIController
     @user = User.find_by(email: user_params[:email])
 
     if @user && @user.authenticate(user_params[:password])
-      render :create
+      render :show
     else
       head :unauthorized
     end
