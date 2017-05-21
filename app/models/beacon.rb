@@ -3,6 +3,8 @@ class Beacon < ApplicationRecord
 
   belongs_to :user, optional: true
 
+  has_many :locations, dependent: :destroy
+
   enum status: { disabled: 0, enabled: 1, lost: 2, stolen: 3 }
 
   validates :major, uniqueness: { scope: :minor }
