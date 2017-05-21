@@ -9,7 +9,7 @@ class Location < ApplicationRecord
 
   reverse_geocoded_by :latitude, :longitude do |beacon, results|
     geo = results.first
-    return unless geo
+    next unless geo
 
     beacon.address = geo.address
     beacon.city = geo.city
