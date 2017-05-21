@@ -9,5 +9,10 @@
 user = User.create!(email: 'foo@bar.com', password: 'qwerty123', name: 'Foo')
 user.update!(api_token: 'foobar')
 
-on_salebeacon = Beacon.create!(major: 0, minor: 0, passcode: '1234', status: 0)
+on_sale_beacon = Beacon.create!(major: 0, minor: 0, passcode: '1234', status: 0)
 disabled_beacon = Beacon.create!(major: 1, minor: 1, passcode: '1234', user: user, status: 1)
+
+location = Location.create!(
+  beacon: disabled_beacon, user: user,
+  latitude: 0.0, longitude: 0.0
+)
