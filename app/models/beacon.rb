@@ -17,6 +17,10 @@ class Beacon < ApplicationRecord
     "#{major}-#{minor}"
   end
 
+  def last_location
+    locations.last
+  end
+
   private
 
   def set_major_minor

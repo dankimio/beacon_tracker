@@ -1,5 +1,5 @@
 class Location < ApplicationRecord
-  belongs_to :beacon
+  belongs_to :beacon, touch: true
   belongs_to :user
 
   validates :latitude, inclusion: { in: -90..90 }

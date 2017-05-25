@@ -1,1 +1,4 @@
-json.extract! location, :id, :latitude, :longitude, :address, :city, :country, :country_code
+json.extract! location,
+              :id, :latitude, :longitude,
+              :address, :city, :country, :country_code,
+              :created_at
