@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   layout -> { devise_controller? ? 'admin' : false }
 
-  before_action -> { I18n.locale = :ru }
+  before_action -> { I18n.locale = :ru if devise_controller? }
 
   protected
 

@@ -1,15 +1,15 @@
-<h1>Beacons</h1>
+<h1><%= t('.title') %></h1>
 
 <div class="form-group">
-  <%= link_to 'New beacon', new_admin_beacon_path, class: 'btn btn-primary' %>
+  <%= link_to t('.new_beacon_button'), new_admin_beacon_path, class: 'btn btn-primary' %>
 </div>
 
 <table class="table">
   <thead>
-    <th>id</th>
-    <th>Name</th>
-    <th>Major</th>
-    <th>Minor</th>
+    <th>№</th>
+    <th><%= Beacon.human_attribute_name(:name) %></th>
+    <th><%= Beacon.human_attribute_name(:major) %></th>
+    <th><%= Beacon.human_attribute_name(:minor) %></th>
     <th></th>
   </thead>
   <tbody>

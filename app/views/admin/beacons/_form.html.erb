@@ -1,4 +1,6 @@
 <%= form_for [:admin, @beacon] do |f| %>
+  <%= render 'shared/error_messages', object: @beacon %>
+
   <div class="form-group">
     <%= f.label :major %>
     <%= f.number_field :major, class: 'form-control' %>
@@ -10,8 +12,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :code %>
-    <%= f.text_field :code, class: 'form-control' %>
+    <%= f.label :passcode %>
+    <%= f.text_field :passcode, class: 'form-control' %>
   </div>
 
   <div class="form-group">

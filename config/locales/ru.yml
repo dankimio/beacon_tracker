@@ -1,8 +1,33 @@
 ru:
   activerecord:
     models:
-      admin: Администратор
+      admin: администратор
+      beacon: маячок
     attributes:
       admin:
         password: Пароль
         password_confirmation: Подтверждение пароля
+      beacon:
+        name: Имя
+        passcode: ПИН-код
+        status: Статус
+  admin:
+    beacons:
+      index:
+        title: Маячки
+        new_beacon_button: Новый маячок
+      new:
+        title: Новый маячок
+  layouts:
+    navbar:
+      beacons: Маячки
+      settings: Настройки
+      sign_in: Войти
+      sign_out: Выйти
+  shared:
+    error_messages:
+      title: Ошибка
+  helpers:
+    submit:
+      create: "Создать %{model}"
+      update: "Обновить %{model}"
