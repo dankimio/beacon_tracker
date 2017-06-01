@@ -13,13 +13,6 @@
     <th></th>
   </thead>
   <tbody>
-    <% @beacons.each do |beacon| %>
-      <tr>
-        <td><%= beacon.id %></td>
-        <td><%= "Bag #{beacon.id}" %></td>
-        <td><%= beacon.major %></td>
-        <td><%= beacon.minor %></td>
-      </tr>
-    <% end %>
+    <%= render partial: 'admin/beacons/beacon', collection: @beacons, cached: true %>
   </tbody>
 </table>
