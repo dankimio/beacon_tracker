@@ -27,12 +27,13 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
-gem 'bootstrap', '~> 4.0.0.alpha6'
-
 # Utilities
 gem 'geocoder', '~> 1.4'
 # Auth
 gem 'devise', '~> 4.3'
+# Views
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'devise-bootstrap-views', '~> 1.0.0.alpha1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

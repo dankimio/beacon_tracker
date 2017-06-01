@@ -55,6 +55,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.0.0.alpha1)
     erubi (1.6.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -170,6 +171,7 @@ DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
   byebug
   devise (~> 4.3)
+  devise-bootstrap-views (~> 1.0.0.alpha1)
   geocoder (~> 1.4)
   jbuilder (~> 2.5)
   jquery-rails
