@@ -1,4 +1,6 @@
 class Admin::BeaconsController < Admin::AdminController
+  before_action :authenticate_admin!
+
   def index
     @beacons = Beacon.all
   end
