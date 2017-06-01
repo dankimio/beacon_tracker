@@ -16,3 +16,5 @@ location = Location.create!(
   beacon: disabled_beacon, user: user,
   latitude: 0.0, longitude: 0.0
 )
+
+admin = Admin.create!(email: 'foo@bar.com', password: 'qwerty123')

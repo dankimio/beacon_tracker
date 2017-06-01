@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins, path: 'admin'
+
   namespace :api do
     resource :user, only: [:show, :create, :update] do
       post 'authenticate'
