@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   layout -> { devise_controller? ? 'admin' : false }
 
+  before_action -> { I18n.locale = :ru }
+
   protected
 
   def after_sign_in_path_for(_)

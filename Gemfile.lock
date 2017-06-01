@@ -56,6 +56,7 @@ GEM
       responders
       warden (~> 1.2.3)
     devise-bootstrap-views (1.0.0.alpha1)
+    devise-i18n (1.1.2)
     erubi (1.6.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -110,6 +111,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-i18n (5.0.4)
+      i18n (~> 0.7)
+      railties (~> 5.0)
     railties (5.1.1)
       actionpack (= 5.1.1)
       activesupport (= 5.1.1)
@@ -172,6 +176,7 @@ DEPENDENCIES
   byebug
   devise (~> 4.3)
   devise-bootstrap-views (~> 1.0.0.alpha1)
+  devise-i18n
   geocoder (~> 1.4)
   jbuilder (~> 2.5)
   jquery-rails
@@ -179,6 +184,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.1.1)
+  rails-i18n
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

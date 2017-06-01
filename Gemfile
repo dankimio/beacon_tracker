@@ -31,6 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'geocoder', '~> 1.4'
 # Auth
 gem 'devise', '~> 4.3'
+# I18n
+gem 'rails-i18n'
+gem 'devise-i18n'
 # Views
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise-bootstrap-views', '~> 1.0.0.alpha1'

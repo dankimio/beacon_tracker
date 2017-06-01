@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    models:
+      admin: Администратор
+    attributes:
+      admin:
+        password: Пароль
+        password_confirmation: Подтверждение пароля
