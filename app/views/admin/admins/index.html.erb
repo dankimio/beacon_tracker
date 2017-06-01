@@ -1,0 +1,15 @@
+<h1><%= t('.title') %></h1>
+
+<div class="form-group">
+  <%= link_to t('.new_button'), new_admin_admin_path, class: 'btn btn-primary' %>
+</div>
+
+<table class="table">
+  <thead>
+    <th><%= Admin.human_attribute_name(:email) %></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <%= render partial: 'admin/admins/admin', collection: @admins, cached: true %>
+  </tbody>
+</table>

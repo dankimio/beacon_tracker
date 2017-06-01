@@ -1,0 +1,9 @@
+<% cache [:admin, admin] do %>
+  <tr>
+    <td><%= admin.email %></td>
+    <td>
+      <%= link_to t('.edit'), edit_admin_admin_path(admin), class: 'btn btn-primary btn-sm' %>
+      <%= link_to t('.destroy'), admin_admin_path(admin), method: :delete, data: { confirm: t('.destroy_confirm') }, class: 'btn btn-danger btn-sm' %>
+    </td>
+  </tr>
+<% end %>

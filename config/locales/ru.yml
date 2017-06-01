@@ -1,8 +1,8 @@
 ru:
   activerecord:
     models:
-      admin: администратор
-      beacon: маячок
+      admin: Администратор
+      beacon: Маячок
     attributes:
       admin:
         password: Пароль
@@ -12,14 +12,33 @@ ru:
         passcode: ПИН-код
         status: Статус
   admin:
+    admins:
+      admin:
+        edit: Изменить
+        destroy: Удалить
+        destroy_confirm: Вы действительно хотите удалить администратора?
+      index:
+        title: Администраторы
+        new_button: Новый администратор
+      new:
+        title: Новый администратор
+      create:
+        notice: Администратор был успешно создан
+      edit:
+        title: Обновление данных администратора
+      update:
+        notice: Администратор был успешно обновлён
+      destroy:
+        notice: Администратор был успешно удалён
     beacons:
       index:
         title: Маячки
-        new_beacon_button: Новый маячок
+        new_button: Новый маячок
       new:
         title: Новый маячок
   layouts:
     navbar:
+      admins: Администраторы
       beacons: Маячки
       settings: Настройки
       sign_in: Войти
@@ -31,3 +50,9 @@ ru:
     submit:
       create: "Создать %{model}"
       update: "Обновить %{model}"
+      admin:
+        create: Создать администратора
+        update: Обновить администратора
+      beacon:
+        create: Создать маячок
+        update: Обновить маячок
