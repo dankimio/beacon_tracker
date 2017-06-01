@@ -31,6 +31,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 
 # Utilities
 gem 'geocoder', '~> 1.4'
+# Auth
+gem 'devise', '~> 4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
