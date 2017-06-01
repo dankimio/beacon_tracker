@@ -22,6 +22,6 @@ class Admin::BeaconsController < Admin::AdminController
   private
 
   def beacon_params
-    params.require(:beacon).permit(:major, :minor, :code)
+    params.require(:beacon).permit(:major, :minor, :passcode)
   end
 end
