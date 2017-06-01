@@ -8,7 +8,9 @@ class Beacon < ApplicationRecord
   enum status: { disabled: 0, enabled: 1, lost: 2, stolen: 3 }
 
   validates :major, uniqueness: { scope: :minor }
-  validates :major, :minor, numericality: { greater_than_or_equal_to: 0 }
+  validates :major, :minor, presence: true
+  validates :major, :minor, numericality: { greater_than_or_equal_to: 0 }, allow_blank: true
+  validates :passcode, presence: true
 
   before_save :set_major_minor
 
