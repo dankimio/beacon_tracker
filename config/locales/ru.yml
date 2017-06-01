@@ -31,11 +31,23 @@ ru:
       destroy:
         notice: Администратор был успешно удалён
     beacons:
+      beacon:
+        edit: Изменить
+        destroy: Удалить
+        destroy_confirm: Вы действительно хотите удалить маячок?
       index:
         title: Маячки
         new_button: Новый маячок
       new:
         title: Новый маячок
+      create:
+        notice: Маячок был успешно создан
+      edit:
+        title: Обновление данных маячка
+      update:
+        notice: Маячок был успешно обновлён
+      destroy:
+        notice: Маячок был успешно удалён
   layouts:
     navbar:
       admins: Администраторы

@@ -4,5 +4,9 @@
     <td><%= "Bag #{beacon.id}" %></td>
     <td><%= beacon.major %></td>
     <td><%= beacon.minor %></td>
+    <td>
+      <%= link_to t('.edit'), edit_admin_beacon_path(beacon), class: 'btn btn-primary btn-sm' %>
+      <%= link_to t('.destroy'), admin_beacon_path(beacon), method: :delete, data: { confirm: t('.destroy_confirm') }, class: 'btn btn-danger btn-sm' %>
+    </td>
   </tr>
 <% end %>
