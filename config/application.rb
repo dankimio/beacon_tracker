@@ -16,5 +16,7 @@ module BeaconTracker
       g.assets false
       g.helper false
     end
+
+    ActiveSupport::JSON::Encoding.time_precision = 0
   end
 end
