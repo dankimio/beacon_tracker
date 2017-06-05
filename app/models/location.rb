@@ -5,7 +5,7 @@ class Location < ApplicationRecord
   validates :latitude, inclusion: { in: -90..90 }
   validates :longitude, inclusion: { in: -180..180 }
 
-  after_create :reverse_geocode
+  after_validation :reverse_geocode
 
   reverse_geocoded_by :latitude, :longitude do |beacon, results|
     geo = results.first
