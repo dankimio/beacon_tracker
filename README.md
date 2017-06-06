@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+- Ruby version: 2.4.1
+- System dependencies: `$ brew install postgresql redis`
+- Configuration: `config/secrets.yml`
+- Database initialization: `$ rails db:setup`
+- How to run the test suite: `$ rails test`
+- Deployment instructions: automatic deploys to Heroku from master
 
-* Ruby version
+## Architecture
 
-* System dependencies
+BeaconTracker consists of the following components:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- API (`https://beacon-tracker.herokuapp.com/api`). The backend for iOS application. Uses token-based authentication. Files: `app/controllers/api/*``
+- Admin area (`https://beacon-tracker.herokuapp.com/admin`). Admin dashboard for internal use. Uses Devise for authentication. Files: `app/controllers/admin/*``
