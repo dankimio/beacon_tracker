@@ -35,7 +35,7 @@ gem 'devise', '~> 4.3'
 gem 'rails-i18n'
 gem 'devise-i18n'
 # Views
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.3.0'
 gem 'devise-bootstrap-views', '~> 1.0.0'
 
 group :development, :test do
