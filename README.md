@@ -4,7 +4,7 @@ Back-end for [BeaconTracker](https://github.com/dankimio/BeaconTracker) iOS app.
 
 ## Setup
 
-- Ruby version: 2.4.1
+- Ruby version: 2.7
 - System dependencies: `$ brew install postgresql redis`
 - Configuration: `config/secrets.yml`
 - Database initialization: `$ rails db:setup`
