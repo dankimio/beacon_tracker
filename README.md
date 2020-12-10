@@ -1,5 +1,7 @@
 # README
 
+Back-end for [BeaconTracker](https://github.com/dankimio/BeaconTracker) iOS app.
+
 ## Setup
 
 - Ruby version: 2.4.1
