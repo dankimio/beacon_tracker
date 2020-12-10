@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '~> 2.4.1'
+ruby '~> 2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
@@ -36,7 +36,7 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 # Views
 gem 'bootstrap', '~> 4.0.0.alpha6'
-gem 'devise-bootstrap-views', '~> 1.0.0.alpha1'
+gem 'devise-bootstrap-views', '~> 1.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
