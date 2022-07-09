@@ -1,6 +1,6 @@
 # BeaconTracker (backend)
 
-Back-end for [BeaconTracker](https://github.com/dankimio/BeaconTracker) iOS app.
+The backend for [BeaconTracker](https://github.com/dankimio/BeaconTracker) iOS app.
 
 ## Setup
 
@@ -15,5 +15,5 @@ Back-end for [BeaconTracker](https://github.com/dankimio/BeaconTracker) iOS app.
 
 BeaconTracker consists of the following components:
 
-- API (`https://beacon-tracker.herokuapp.com/api`). The backend for iOS application. Uses token-based authentication. Files: `app/controllers/api/*``
-- Admin area (`https://beacon-tracker.herokuapp.com/admin`). Admin dashboard for internal use. Uses Devise for authentication. Files: `app/controllers/admin/*``
+- API (`https://beacon-tracker.herokuapp.com/api`). The backend for iOS application. Uses token-based authentication. Files: `app/controllers/api/*`
+- Admin area (`https://beacon-tracker.herokuapp.com/admin`). Admin dashboard for internal use. Uses Devise for authentication. Files: `app/controllers/admin/*`
