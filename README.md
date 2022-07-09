@@ -1,10 +1,10 @@
-# README
+# BeaconTracker (backend)
 
 Back-end for [BeaconTracker](https://github.com/dankimio/BeaconTracker) iOS app.
 
 ## Setup
 
-- Ruby version: 2.7
+- Ruby version: see `.ruby-version`
 - System dependencies: `$ brew install postgresql redis`
 - Configuration: `config/secrets.yml`
 - Database initialization: `$ rails db:setup`
