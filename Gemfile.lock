@@ -47,7 +47,7 @@ GEM
       execjs (~> 2)
     bcrypt (3.1.18)
     bindex (0.8.1)
-    bootstrap (4.3.1)
+    bootstrap (4.6.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -208,7 +208,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap (~> 4.3.0)
+  bootstrap (~> 4.3)
   byebug
   devise (~> 4.3)
   devise-bootstrap-views (~> 1.0.0)
