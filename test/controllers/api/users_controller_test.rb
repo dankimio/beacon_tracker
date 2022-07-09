@@ -21,7 +21,8 @@ class API::UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update user' do
-    patch api_user_url(@user, api_token: api_token), params: { user: { email: @user.email, name: @user.name } }, as: :json
+    patch api_user_url(@user, api_token: api_token), params: { user: { email: @user.email, name: @user.name } },
+                                                     as: :json
     assert_response 200
   end
 

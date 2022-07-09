@@ -1,6 +1,6 @@
 class Admin::AdminsController < Admin::AdminController
   before_action :authenticate_admin!
-  before_action :set_admin, only: [:edit, :update, :destroy]
+  before_action :set_admin, only: %i[edit update destroy]
 
   def index
     @admins = Admin.all

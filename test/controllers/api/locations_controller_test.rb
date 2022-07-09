@@ -14,8 +14,8 @@ class API::LocationsControllerTest < ActionDispatch::IntegrationTest
   test 'should create location' do
     assert_difference 'Location.count' do
       post api_beacon_locations_url(@beacon.major_minor, api_token: api_token), params: {
-        location: @location.attributes
-      }, as: :json
+                                                                                  location: @location.attributes
+                                                                                }, as: :json
     end
 
     assert_response 201

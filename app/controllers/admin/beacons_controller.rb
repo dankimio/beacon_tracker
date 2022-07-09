@@ -1,6 +1,6 @@
 class Admin::BeaconsController < Admin::AdminController
   before_action :authenticate_admin!
-  before_action :set_beacon, only: [:edit, :update, :destroy]
+  before_action :set_beacon, only: %i[edit update destroy]
 
   def index
     @beacons = Beacon.all

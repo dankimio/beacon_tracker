@@ -1,6 +1,6 @@
 class API::UsersController < API::APIController
-  skip_before_action :restrict_access!, only: [:create, :authenticate]
-  before_action :set_user, only: [:show, :update]
+  skip_before_action :restrict_access!, only: %i[create authenticate]
+  before_action :set_user, only: %i[show update]
 
   def show
   end
@@ -26,7 +26,7 @@ class API::UsersController < API::APIController
   def authenticate
     @user = User.find_by(email: user_params[:email])
 
-    if @user && @user.authenticate(user_params[:password])
+    if @user&.authenticate(user_params[:password])
       render :show
     else
       head :unauthorized
